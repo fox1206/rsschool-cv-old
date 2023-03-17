@@ -48,3 +48,25 @@ let number = Math.sqrt(num);
 
 
 
+## Projects
+* ***js:***
+    + [Portfolio](https://rolling-scopes-school.github.io/fox1206-JSFEPRESCHOOL/portfolio/)
+    + [Gallery](https://fox1206.github.io/gallery-image/gallery/)
+    + [Slider](https://fox1206.github.io/games/gallery/)
+    + [Drag-drop](https://fox1206.github.io/games/dragdrop/)
+    + [Dashboard](https://fox1206.github.io/Practic/)
+
+
+
+## Education and Courses
+* ***University:*** Far Eastern Federal University. Applied computer science in economics
+* ***Courses:***    
+    + Academy Step. Java programming Language
+    + RS School course "JavaScript/Front-end". Strage0
+    + Redev course "JavaScript" (in progress)
+
+
+
+## Languages:
+* Russian - Native
+* English - A1+
