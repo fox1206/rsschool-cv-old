@@ -1,3 +1,190 @@
+/* Шрифты Monserrat */
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+
 *{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+::before,
+::after{
+  box-sizing: border-box;
+}
+
+:root{
+  --color-pink: #EFA2B4;
+  --color-main: #E02F6B;
+  --color-blue-light: #AEF1EE;
+  --color-blue: #0000FF;
+  --color-blue-dark: #18293C;
+  --color-orange: #FFA500;
+  --color-green: #c6dc39;
+  --color-white: #FFFFFF;
+  --color-white-a4: rgba(255, 255, 255, .4);
+  --color-white-a25: rgba(255, 255, 255, .25);
+  --blur: blur(5px);
+}
+
+::-webkit-scrollbar{
+  width:3px;
+}
+::-webkit-scrollbar-track{
+  background-color:var(--color-white);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--color-pink);
+}
+
+
+body{
+  user-select: none;
+  min-height: 100vh;
+  padding: 5vh 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-blue-dark);
+  background-image: linear-gradient(to top left, var(--color-pink), var(--color-blue-light));
+  overflow-x: hidden;
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .15;
+  background-color: var(--color-green);
+}
+
+h1, h2{
+  font-weight: 600;
+}
+
+h3{
+  font-weight: 500;
+}
+
+a{
+  text-decoration: none;
+}
+
+section{
+  min-height: 90vh;
+  border-radius: 20px;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+  backdrop-filter: var(--blur);
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.main{
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*================ Главная страница ===================*/
+.home__section{
+  display: flex;
+  padding: 120px 0;
+}
+
+.container{
+  width: 100%;
+  padding: 0 40px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center{
+  align-items: center;
+}
+
+/* ========== обработка кнопок ========== */
+.btn{
+  position: relative;
+  display: inline-block;
+  line-height: 1.5;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+  color: var(--color-main);
+  overflow: hidden;
+  vertical-align: middle;
+  transition: .5s ease;
+  cursor: pointer;
+}
+.btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-pink);
+  z-index: -1;
+  transition: .5s ease;
+}
+.btn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+.btn:hover{
+  color: var(--color-white);
+}
+
+.home__picture,
+.home__greeting{
+  width: 50%;
+  padding: 15px;
+}
+
+.home__greeting .btn{
+  margin: 0 15px 15px 0;
+}
+
+/* ========== обработка текста ========== */
+.home__greeting p{
+  font-size: 18px;
+}
+.home__greeting h1{
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.home__greeting h2{
+  margin: 0 0 30px;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+/* ========== обработка фото ========== */
+.home__picture .picture__box{
+  max-width: 360px;
+  border-radius: 50%;
+  margin: auto;
+  border: 7px solid var(--color-white-a25);
+  background-color: var(--color-white-a25);
+}
+.home__picture .picture__box img{
+  width: 100%;
+  border-radius: 50%;
 }
