@@ -11,7 +11,7 @@
   
   <main class="main">
     <!-- Главная страница начало -->
-    <section class="home__section center">
+    <section class="home__section center hidden">
       <div class="container">
         <div class="row center">
           <div class="home__greeting">
@@ -30,6 +30,76 @@
       </div>
     </section>
     <!-- Главная страница конец -->
+
+    <!-- Моя информация начало -->
+    <section class="about-me__section s-p">
+      <div class="container">
+        <div class="row">
+          <div class="title__section">
+            <h2>about me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="about-me__picture">
+            <div class="picrure__box">
+              <img src="assets/image/600x700.png" alt="picture">
+            </div>
+          </div>
+          <div class="about-me__text">
+            <p>I want to become a great developer and create useful applications for people. My dream is to get into a large dynamic company that is not afraid to take on novice developers, and I, in turn, guarantee to work, learn, and develop with enthusiasm. To get closer to my dream, I take various courses, participate in hackathons, write pet projects. I like to travel, recently I often travel around Russia, read fiction, do yoga.</p>
+            <h3>skills</h3>
+            <ul class="skills">
+              <li class="skill-item">css</li>
+              <li class="skill-item">markdown</li>
+              <li class="skill-item">javascript</li>
+              <li class="skill-item">react</li>
+              <li class="skill-item">tailwind</li>
+              <li class="skill-item">material UI</li>
+              <li class="skill-item">thymeleaf</li>
+              <li class="skill-item">java</li>
+              <li class="skill-item">mySql</li>
+              <li class="skill-item">html</li>
+            </ul>
+
+            <div class="about-me__tabs">
+              <button class="tab-item active" data-target="#">education</button>
+              <button class="tab-item" data-target="#">experience</button>
+            </div>
+
+            <div class="tab__content" id="education">
+              <div class="time-line">
+                <div class="time-line__item">
+                  <span class="date">2023 - now</span>
+                  <h4>rs school - <span>JS / front - end (strage 1)</span></h4>
+                  <p>The training program includes: in-depth study of algorithms and data structures, advanced JS, as well as familiarity with the programming language TypeScript.</p>
+                </div>
+                <div class="time-line__item">
+                  <span class="date">2022 - 2022</span>
+                  <h4>rs school - <span>JS / front - end (strage 0)</span></h4>
+                  <p>Independent study of the material and performance of tasks. Technology stack: HTML, CSS, JS, GIT, GITHUB.</p>
+                </div>
+                <div class="time-line__item">
+                  <span class="date">2020 - 2022</span>
+                  <h4>academy step - <span>java programming language</span></h4>
+                  <p>Direction -
+                    programming using Java technology. During my studies, I studied design patterns, database theory and database management systems, and much more.</p>
+                </div>
+                <div class="time-line__item">
+                  <span class="date">2007 - 2012</span>
+                  <h4>far eastern federal university - <span>applied informatics in economics</span></h4>
+                  <p>Curriculum: programming languages ​​and methods,
+                    algorithms and data structures,
+                    bases
+                    data, algorithmic graph theory,
+                    Network and server technologies.</p>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Моя информация конец -->
   </main>
   
 </body>

@@ -1,11 +1,14 @@
 /* Шрифты Monserrat */
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.hidden{
+  display: none !important;
 }
 
 ::before,
@@ -37,7 +40,6 @@
   background-color: var(--color-pink);
 }
 
-
 body{
   user-select: none;
   min-height: 100vh;
@@ -47,6 +49,7 @@ body{
   font-weight: 300;
   line-height: 1.6;
   color: var(--color-blue-dark);
+  background-attachment: fixed;
   background-image: linear-gradient(to top left, var(--color-pink), var(--color-blue-light));
   overflow-x: hidden;
 }
@@ -75,6 +78,10 @@ a{
   text-decoration: none;
 }
 
+li{
+  list-style: none;
+}
+
 section{
   min-height: 90vh;
   border-radius: 20px;
@@ -88,12 +95,33 @@ img{
   vertical-align: middle;
 }
 
+button{
+  font-family: inherit;
+}
+
+/*================ MAIN начало ===================*/
 .main{
   max-width: 1200px;
   margin: auto;
 }
 
-/*================ Главная страница ===================*/
+.s-p{
+  padding: 80px 0;
+}
+
+.title__section{
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.title__section h2{
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+/*================ Главная страница начало ===================*/
 .home__section{
   display: flex;
   padding: 120px 0;
@@ -188,3 +216,143 @@ img{
   width: 100%;
   border-radius: 50%;
 }
+/*================ Главная страница конец ===================*/
+/*================ Раздел обо мне начало ===================*/
+.about-me__picture{
+  width: 40%;
+  padding: 0 15px;
+}
+.about-me__picture .picrure__box{
+  max-width: 380px;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+}
+.about-me__picture .picrure__box img{
+  width: 100%;
+}
+
+.about-me__text{
+  width: 60%;
+  padding: 0 15px;
+}
+.about-me__text h3{
+  margin: 20px 0;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/*================ Раздел Умения начало ===================*/
+.about-me__text .skills{
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-me__text .skill-item{
+  padding: 5px 15px;
+  margin:  0 10px 10px 0;
+  border-radius: 20px;
+  text-transform: capitalize;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+}
+/*================ Раздел Умения конец ===================*/
+
+.about-me__tabs{
+  margin-top: 20px;
+}
+.about-me__tabs .tab-item{
+  position: relative;
+  display: inline-block;
+  margin: 0 30px 0 0;
+  padding: 2px 0;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--color-blue-dark);
+  background-color: transparent;
+  opacity: .5;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.about-me__tabs .tab-item::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--color-blue-dark);
+  transition: width .3s ease;
+}
+.about-me__tabs .tab-item:hover::before{
+  width: 100%;
+}
+.about-me__tabs .tab-item.active::before{
+  width: 100%;
+  background-color: var(--color-main);
+}
+.about-me__tabs .tab-item.active{
+  cursor: auto;
+  opacity: 1;
+  color: var(--color-main);
+}
+.about-me__tabs .tab-item:last-child{
+  margin: 0;
+}
+.about-me__text .tab__content{
+  padding:  20px 0;
+}
+
+/*================ Раздел Образование начало ===================*/
+.about-me__text .time-line{
+  position: relative;
+}
+.about-me__text .time-line::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 100%;
+  width: 1px;
+  background-color: var(--color-main);
+}
+.about-me__text .time-line__item{
+  position: relative;
+  margin-bottom: 30px;
+  padding: 10px 0 0 40px;
+}
+.about-me__text .time-line__item::before{
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 16px;
+  background-color: var(--color-main);
+}
+.about-me__text .time-line__item:last-child{
+  margin-bottom: 0;
+}
+.about-me__text .time-line__item .date{
+  display: block;
+  margin:  0 0 10px;
+  font-weight: 400;
+  color: var(--color-main);
+}
+.about-me__text .time-line__item h4{
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+.about-me__text .time-line__item h4 span{
+  font-weight: 400;
+}
+/*================ Раздел Образование конец ===================*/
+
+
+
+/*================ Раздел обо мне конец ===================*/
+/*================ MAIN конец ===================*/
