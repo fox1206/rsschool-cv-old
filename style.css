@@ -103,6 +103,10 @@ button{
 .main{
   max-width: 1200px;
   margin: auto;
+  transition:  all .5s ease-in-out;
+}
+.main.out{
+  opacity: 0;
 }
 
 .s-p{
@@ -421,6 +425,13 @@ width: 100%;
   border: 1px solid var(--color-white-a4);
   background-color: var(--color-white-a25);
   backdrop-filter: var(--blur);
+  opacity: 0;
+  transform: scale(.8);
+}
+.project-window.open .project-window__content{
+  opacity: 1;
+  transform: scale(1);
+  transition: all .5 ease;
 }
 .project-window__head{
   position: relative;
