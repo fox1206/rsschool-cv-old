@@ -23,7 +23,7 @@ const main = document.querySelector('.main');
 const picture = document.querySelector('.project-windows__picture img');
 const headerPicture = document.querySelector('.project-window__head h3');
 const description = document.querySelector('.project-windows__info .description p');
-const info = document.querySelector('.project-windows__info .back-info li')
+const info = document.querySelector('.project-windows__info');
 
 const projectInformation = (item) => {
   // console.log(item);
@@ -33,10 +33,7 @@ const projectInformation = (item) => {
   
   description.innerHTML = item.querySelector('.project__item-details .description p').innerHTML;
 
-  info.array.forEach(element => {
-    console.log(element);
-  });
-  // info.innerHTML = item.querySelector('.project__item-details .back-info li').innerHTML;
+  info.innerHTML = item.querySelector('.project__item-details').innerHTML;
 }
 
 document.addEventListener('click', (event) => {
