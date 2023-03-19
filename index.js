@@ -50,4 +50,13 @@ btnClose.addEventListener('click', () => {
   main.classList.toggle('out');
 });
 
+/* ================== Закрытие портфолио на пустом поле =================== */
+document.addEventListener('click', (event) => {
+  if(event.target.classList.contains('project-window__box')){
+    document.querySelector('.project-window').classList.toggle('open');
+    main.classList.toggle('out');
+    projectInformation(event.target.parentElement);
+  }
+});
+
 
