@@ -22,7 +22,7 @@ const btnClose = document.querySelector('.project-window__close');
 const main = document.querySelector('.main');
 const picture = document.querySelector('.project-windows__picture img');
 const headerPicture = document.querySelector('.project-window__head h3');
-const description = document.querySelector('.project-windows__info .description p');
+const description = document.querySelector('.project-windows__info');
 const info = document.querySelector('.project-windows__info');
 
 const projectInformation = (item) => {
