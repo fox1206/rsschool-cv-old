@@ -1,3 +1,4 @@
+/* ================== Переключение между вкладками =================== */
 const tabs = document.querySelector('.about-me__tabs');
 const aboutSection = document.querySelector('.about-me__section');
 

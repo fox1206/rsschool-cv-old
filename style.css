@@ -399,6 +399,7 @@ width: 100%;
   width: 100%;
   height: 100%;
   /* background-color: goldenrod; */
+  visibility: hidden;
   overflow-y: auto;
   z-index: 300;
 }
@@ -416,5 +417,46 @@ width: 100%;
   border-radius: 20px;
   border: 1px solid var(--color-white-a4);
   background-color: var(--color-white-a25);
+  /* backdrop-filter: var(--color-blue-dark); */
+}
+.project-window__head{
+  position: relative;
+}
+.project-window__head .btn{
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+}
+.project-windows__picture img{
+  border-radius: 10px;
+}
+.project-window__head h3{
+  margin: 20px 0 15px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.project-windows__info .description{
+  margin-bottom: 20px;
+}
+.project-windows__info .back-info li{
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.project-windows__info .back-info li span{
+  font-weight: 300;
+}
+.project-windows__info .back-info a{
+  color: var(--color-main);
+}
+.project-windows__info .back-info a:visited{
+  color: var(--color-main);
 }
 /* ================ Окно с проектами конец =================== */
