@@ -400,8 +400,11 @@ width: 100%;
   height: 100%;
   /* background-color: goldenrod; */
   visibility: hidden;
+  z-index: 200;
+}
+.project-window.open{
   overflow-y: auto;
-  z-index: 300;
+  visibility: visible;
 }
 .project-window__box{
   display: flex;
@@ -417,7 +420,7 @@ width: 100%;
   border-radius: 20px;
   border: 1px solid var(--color-white-a4);
   background-color: var(--color-white-a25);
-  /* backdrop-filter: var(--color-blue-dark); */
+  backdrop-filter: var(--color-blue-dark);
 }
 .project-window__head{
   position: relative;

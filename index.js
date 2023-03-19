@@ -15,3 +15,13 @@ tabs.addEventListener('click', (event) => {
     aboutSection.querySelector(section).classList.add('active');
   }
 });
+
+
+/* ================== Открытие портфолио =================== */
+document.addEventListener('click', (event) => {
+  if(event.target.classList.contains('view-project')){
+    // console.log('click');
+    document.querySelector('.project-window').classList.toggle('open');
+    
+  }
+});
