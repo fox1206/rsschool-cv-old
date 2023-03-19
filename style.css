@@ -1,0 +1,554 @@
+/* Шрифты Monserrat */
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden{
+  display: none !important;
+}
+
+::before,
+::after{
+  box-sizing: border-box;
+}
+
+:root{
+  --color-pink: #EFA2B4;
+  --color-main: #E02F6B;
+  --color-blue-light: #AEF1EE;
+  --color-blue: #0000FF;
+  --color-blue-dark: #18293C;
+  --color-orange: #FFA500;
+  --color-green: #c6dc39;
+  --color-white: #FFFFFF;
+  --color-white-a4: rgba(255, 255, 255, .4);
+  --color-white-a25: rgba(255, 255, 255, .25);
+  --blur: blur(5px);
+}
+
+::-webkit-scrollbar{
+  width:3px;
+}
+::-webkit-scrollbar-track{
+  background-color:var(--color-white);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--color-pink);
+}
+
+body{
+  user-select: none;
+  min-height: 100vh;
+  padding: 5vh 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-blue-dark);
+  background-attachment: fixed;
+  background-image: linear-gradient(to top left, var(--color-pink), var(--color-blue-light));
+  overflow-x: hidden;
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .15;
+  background-color: var(--color-green);
+}
+
+h1, h2{
+  font-weight: 600;
+}
+
+h3{
+  font-weight: 500;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+section{
+  min-height: 90vh;
+  border-radius: 20px;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+  backdrop-filter: var(--blur);
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+button{
+  font-family: inherit;
+}
+
+/*================ MAIN начало ===================*/
+.main{
+  max-width: 1200px;
+  margin: auto;
+  transition:  all .5s ease-in-out;
+}
+.main.out{
+  opacity: 0;
+}
+
+.s-p{
+  padding: 80px 0;
+}
+
+.title__section{
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.title__section h2{
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+/*================ Главная страница начало ===================*/
+.home__section{
+  display: flex;
+  padding: 120px 0;
+}
+
+.container{
+  width: 100%;
+  padding: 0 40px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center{
+  align-items: center;
+}
+
+/* ========== обработка кнопок ========== */
+.btn{
+  position: relative;
+  display: inline-block;
+  line-height: 1.5;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+  color: var(--color-main);
+  overflow: hidden;
+  vertical-align: middle;
+  transition: .5s ease;
+  cursor: pointer;
+}
+.btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-pink);
+  z-index: -1;
+  transition: .5s ease;
+}
+.btn:hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+.btn:hover{
+  color: var(--color-white);
+}
+
+.home__picture,
+.home__greeting{
+  width: 50%;
+  padding: 15px;
+}
+
+.home__greeting .btn{
+  margin: 0 15px 15px 0;
+}
+
+/* ========== обработка текста ========== */
+.home__greeting p{
+  font-size: 18px;
+}
+.home__greeting h1{
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.home__greeting h2{
+  margin: 0 0 30px;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+/* ========== обработка фото ========== */
+.home__picture .picture__box{
+  max-width: 360px;
+  border-radius: 50%;
+  margin: auto;
+  border: 7px solid var(--color-white-a25);
+  background-color: var(--color-white-a25);
+}
+.home__picture .picture__box img{
+  width: 100%;
+  border-radius: 50%;
+}
+/*================ Главная страница конец ===================*/
+/*================ Раздел обо мне начало ===================*/
+.about-me__picture{
+  width: 40%;
+  padding: 0 15px;
+}
+.about-me__picture .picrure__box{
+  max-width: 380px;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+}
+.about-me__picture .picrure__box img{
+  width: 100%;
+}
+
+.about-me__text{
+  width: 60%;
+  padding: 0 15px;
+}
+.about-me__text h3{
+  margin: 20px 0;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/*================ Раздел Умения начало ===================*/
+.about-me__text .skills{
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-me__text .skill-item{
+  padding: 5px 15px;
+  margin:  0 10px 10px 0;
+  border-radius: 20px;
+  text-transform: capitalize;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+}
+/*================ Раздел Умения конец ===================*/
+
+.about-me__tabs{
+  margin-top: 20px;
+}
+.about-me__tabs .tab-item{
+  position: relative;
+  display: inline-block;
+  margin: 0 30px 0 0;
+  padding: 2px 0;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--color-blue-dark);
+  background-color: transparent;
+  opacity: .5;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.about-me__tabs .tab-item::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--color-blue-dark);
+  transition: width .3s ease;
+}
+.about-me__tabs .tab-item:hover::before{
+  width: 100%;
+}
+.about-me__tabs .tab-item.active::before{
+  width: 100%;
+  background-color: var(--color-main);
+}
+.about-me__tabs .tab-item.active{
+  cursor: auto;
+  opacity: 1;
+  color: var(--color-main);
+}
+.about-me__tabs .tab-item:last-child{
+  margin: 0;
+}
+.about-me__text .tab__content{
+  padding:  20px 0;
+  display: none;
+}
+.about-me__text .tab__content.active{
+  display: block;
+}
+
+/*================ Раздел Образование начало ===================*/
+/*================ Раздел Опыт начало ===================*/
+.about-me__text .time-line{
+  position: relative;
+}
+.about-me__text .time-line::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 100%;
+  width: 1px;
+  background-color: var(--color-main);
+}
+.about-me__text .time-line__item{
+  position: relative;
+  margin-bottom: 30px;
+  padding: 10px 0 0 40px;
+}
+.about-me__text .time-line__item::before{
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 16px;
+  background-color: var(--color-main);
+}
+.about-me__text .time-line__item:last-child{
+  margin-bottom: 0;
+}
+.about-me__text .time-line__item .date{
+  display: block;
+  margin:  0 0 10px;
+  font-weight: 400;
+  color: var(--color-main);
+}
+.about-me__text .time-line__item h4{
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+.about-me__text .time-line__item h4 span{
+  font-weight: 400;
+}
+/*================ Раздел Образование конец ===================*/
+/*================ Раздел Опыт конец ===================*/
+.about-me__text .btn{
+  margin: 0 15px 15px 0;
+}
+/*================ Раздел обо мне конец ===================*/
+
+/*================ Раздел проект начало ===================*/
+.project__section{
+  padding-bottom: 50px;
+}
+.project__item{
+  width: calc((100% / 3) - 30px);
+  margin: 0 15px 30px;
+}
+.project__item-box{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+}
+.project__item h3{
+  margin: 20px 0;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.project__item-box img{
+  border-radius: 10px;
+width: 100%;
+}
+.project__item-details{
+  display: none;
+}
+/*================ Раздел проект конец ===================*/
+
+/*================ Раздел контакты начало ===================*/
+.contact-info{
+  width: 50%;
+  padding: 0 15px;
+}
+.contact-info ul{
+  display: flex;
+}
+.contact-info__item{
+  margin:  0 0 30px;
+  padding: 0 0 0 20px;
+}
+.contact-info__item h3{
+  margin: 0 0 5px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.contact-info__item li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  margin: 0 15px 0 0;
+  border-radius: 50%;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+  transition:  all .3s ease;
+  color: var(--color-main);
+}
+.contact-info__item li a:hover{
+  color: var(--color-white);
+  background-color: var(--color-pink);
+}
+
+.contact-form{
+  width: 50%;
+  padding: 0 15px;
+}
+.contact-form .input__group{
+  width: 100%;
+  margin-bottom: 30px;
+}
+.contact-form .input{
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 20px;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+  color: var(--color-blue-dark);
+  transition: border-color .3s ease;
+}
+.contact-form .input:active,
+.contact-form .input:hover{
+  outline: none;
+}
+.contact-form .input:focus{
+  outline: none;
+  border-color: var(--color-pink);
+}
+.contact-form .input::placeholder{
+  font-weight: 300;
+  opacity: .7;
+  color: var(--color-blue-dark);
+}
+.contact-form textarea.input{
+  height: 100px;
+  padding-top: 15px;
+  resize: none;
+}
+/*================ Раздел контакты конец ===================*/
+/*================ MAIN конец ===================*/
+
+/* ================ Окно с проектами начало =================== */
+.project-window{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: goldenrod; */
+  visibility: hidden;
+  z-index: 200;
+}
+.project-window.open{
+  overflow-y: auto;
+  visibility: visible;
+}
+.project-window__box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 15px;
+}
+.project-window__content{
+  max-width: 850px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--color-white-a4);
+  background-color: var(--color-white-a25);
+  backdrop-filter: var(--blur);
+  opacity: 0;
+  transform: scale(.8);
+}
+.project-window.open .project-window__content{
+  opacity: 1;
+  transform: scale(1);
+  transition: all .5 ease;
+}
+.project-window__head{
+  position: relative;
+}
+.project-window__head .btn{
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+}
+.project-windows__picture img{
+  border-radius: 10px;
+}
+.project-window__head h3{
+  margin: 20px 0 15px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.project-windows__info .description{
+  margin-bottom: 20px;
+}
+.project-windows__info .back-info li{
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.project-windows__info .back-info li span{
+  font-weight: 300;
+}
+.project-windows__info .back-info a{
+  color: var(--color-main);
+}
+.project-windows__info .back-info a:visited{
+  color: var(--color-main);
+}
+/* ================ Окно с проектами конец =================== */
